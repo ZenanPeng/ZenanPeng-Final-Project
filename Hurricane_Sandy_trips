@@ -1,0 +1,25 @@
+
+WITH hired_trips AS (
+    SELECT pickup_datetime 
+    FROM taxi_trips
+    WHERE pickup_datetime BETWEEN '2012-10-22' AND '2012-11-06'
+    UNION ALL
+    SELECT pickup_datetime
+    FROM uber_trips
+    WHERE pickup_datetime BETWEEN '2012-10-22' AND '2012-11-06'
+    )
+SELECT 
+    strftime('%Y-%m-%d %H', hourly_weather.date) as hour_in_day,
+    COALESCE(COUNT(*), 0),
+    hourly_weather.hourly_precipitation,
+    hourly_weather.hourly_wind_speed
+FROM hourly_weather
+LEFT JOIN hired_trips
+ON 
+    strftime('%Y-%m-%d %H', hourly_weather.date) = strftime('%Y-%m-%d %H', hired_trips.pickup_datetime)
+WHERE 
+    hour_in_day BETWEEN '2012-10-22' AND '2012-11-06'
+GROUP BY 
+    hour_in_day
+ORDER BY 
+    hour_in_day ASC
