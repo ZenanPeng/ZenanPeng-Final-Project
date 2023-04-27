@@ -1,16 +1,16 @@
 
 CREATE TABLE IF NOT EXISTS hourly_weather (
     id INTEGER PRIMARY KEY,
-    Date DATE,
-    HourlyPrecipitation FLOAT,
-    HourlyWindSpeed FLOAT
+    date DATE,
+    hourly_precipitation FLOAT,
+    hourly_wind_speed FLOAT
 );
 
 CREATE TABLE IF NOT EXISTS daily_weather (
     id INTEGER PRIMARY KEY,
-    Date DATE,
-    DailyPrecipitation FLOAT,
-    DailyAverageWindSpeed FLOAT
+    date DATE,
+    daily_precipitation FLOAT,
+    daily_average_wind_speed FLOAT
 );
 
 CREATE TABLE IF NOT EXISTS taxi_trips (
