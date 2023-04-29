@@ -9,8 +9,14 @@ CREATE TABLE IF NOT EXISTS hourly_weather (
 CREATE TABLE IF NOT EXISTS daily_weather (
     id INTEGER PRIMARY KEY,
     date DATE,
-    daily_precipitation FLOAT,
     daily_average_wind_speed FLOAT
+);
+
+CREATE TABLE IF NOT EXISTS sun_weather (
+    id INTEGER PRIMARY KEY,
+    date DATE,
+    sunrise TEXT,
+    sunset TEXT
 );
 
 CREATE TABLE IF NOT EXISTS taxi_trips (
