@@ -38,4 +38,4 @@ CREATE TABLE IF NOT EXISTS uber_trips (
     dropoff_longitude FLOAT,
     dropoff_latitude FLOAT,
     distance FLOAT
-    );
+);
