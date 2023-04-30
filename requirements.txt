@@ -6,6 +6,8 @@ bs4
 requests
 math
 geopandas
+pandas
+datetime
 numpy
 sqlalchemy
 matplotlib.pyplot
