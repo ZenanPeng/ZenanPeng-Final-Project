@@ -1,1 +1,15 @@
-# Add your third-party Python libraries here
+**All third-party Python libraries are included in this file.**
+
+os
+re
+bs4
+requests
+math
+geopandas
+numpy
+sqlalchemy
+matplotlib.pyplot
+folium
+folium.plugins
+typing
+warnings
