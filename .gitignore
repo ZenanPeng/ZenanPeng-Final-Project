@@ -3,3 +3,7 @@
 __pycache__/
 
 # Add more files & directories as needed
+data/*.csv
+data/*.parquet
+data/taxi_zones
+*.db
