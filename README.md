@@ -10,4 +10,4 @@ Group 13
 
 **UNIs**
 
-UNIs: [zp2259, tq2160]
+UNIs: [zp2259]
